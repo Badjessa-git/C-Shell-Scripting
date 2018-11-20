@@ -1,0 +1,14 @@
+CFLAGS= -Wall -Wextra -Wwrite-strings
+
+#target: prerequisites                                                                               
+#<TAB>recipe                                                                                         
+
+bib: bib.o bibFuncs.o
+        gcc ${LFLAGS} -o bib bib.o bibFuncs.o
+
+bibFuncs.o: bibFuncs.c bibFuncs.h
+        gcc ${CFLAGS} -c bibFuncs.c
+
+bib.o: bib.c
+        gcc ${CFLAGS} -c bib.c
+

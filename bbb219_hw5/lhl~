@@ -1,0 +1,10 @@
+#!/bin/bash
+##Badjessa B. Bahoumda
+##CSE 271
+
+cd /usr/bin
+
+values=$(ls -i)
+
+for i in values:
+    echo $i

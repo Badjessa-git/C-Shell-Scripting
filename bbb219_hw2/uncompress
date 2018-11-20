@@ -1,0 +1,33 @@
+#!/bin/bash
+## Badjessa B. Bahoumda
+## CSE 271
+## Uncompress a file based on its type
+
+if [ $# -eq 0 ]; then
+    echo 'No File was provided, Please add a file'
+    exit 2
+fi
+
+rc=$(tar -tf $1 | wc -l) 
+if [ $rc -gt 0 ]; then 
+    echo 'uncompressing file'
+    tar xf $1
+    exit 0
+fi
+
+file $1 | grep gzip > /dev/null
+rc=$?
+if [ $rc -eq 0 ]; then
+   echo 'uncompressing gzip file'
+   gzip -d $1
+else 
+    file $1 | grep zip > /dev/null
+    rc=$?
+    if [ $rc -eq 0 ]; then
+        echo 'uncompressing zip file'
+        unzip $1
+    else 
+	echo 'The file given is not a compressed file'
+        exit 1
+    fi
+fi

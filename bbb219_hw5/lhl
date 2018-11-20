@@ -1,0 +1,27 @@
+#!/bin/bash
+##Badjessa B. Bahoumda
+##CSE 271
+##Return all the programs which share the same inode in ascending order 
+
+cd /usr/bin
+declare -a names
+declare -a numbers
+values=$(ls -i)
+for i in $values
+do
+    if [[ $i =~ ^[0-9]+$ ]];
+    then
+	numbers+=("$i" )
+    fi
+done
+
+unsorted_duplicate=$(printf '%s\n' "${numbers[@]}"|awk '!($0 in seen){seen[$0];next} 1')
+sorted_duplicates=$(printf "%s\n" "${unsorted_duplicate[@]}" | sort -n) 
+for j in $sorted_duplicates
+do
+    temp=$(find -inum "$j" -printf "%f\n")
+    for i in $temp
+    do
+	echo "$j: $i"
+    done
+done

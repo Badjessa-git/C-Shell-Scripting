@@ -1,0 +1,14 @@
+Title: Why C is complicated
+Author: Romeo
+Publication: Something
+Publisher: The best
+Date: August 15
+Pages: 60
+;
+Title: Life is hard
+Author: Im struggling
+Publication: Struggling Hard
+Publisher: Struggle Inc
+Date: Graduation
+Pages: I dont know
+;

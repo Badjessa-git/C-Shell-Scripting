@@ -1,0 +1,21 @@
+Title: Something is coming
+Author: What
+Publication: Something
+Publisher: The best
+Date: 1997-02-12
+Pages: 60
+;
+Title: Hedfa
+Author: Something
+Publication: Struggling Hard
+Publisher: Struggle Inc
+Date: 1997-02-12
+Pages: 30
+;
+Title: Romeo
+Author: Romeo
+Publication: 
+Publisher: 
+Date: 0000-00-00
+Pages: 
+;

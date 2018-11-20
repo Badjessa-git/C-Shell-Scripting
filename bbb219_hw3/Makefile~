@@ -1,0 +1,2 @@
+gcc -g -c -Wall bibFuncs.c
+gcc -Wall -g -o bib  bibFuncs.o bib.c
